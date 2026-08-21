@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legion Clash — Formation Auto-Battler by Sudoja Games</title>
+<meta name="description" content="Build your army, set the formation, and auto-battle your way to victory. A one-handed formation auto-battler for Android by Sudoja Games.">
+<meta property="og:title" content="Legion Clash">
+<meta property="og:description" content="Build your army, set the formation, and auto-battle your way to victory.">
+<meta property="og:image" content="icon.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="icon.png">
+<style>
+  :root{
+    --bg:#1b1710; --bg2:#241e15; --panel:#3a2f21; --panel-lit:#4a3c2a;
+    --ink:#f2e7d2; --ink-dim:#bda98a; --gold:#e8b34a; --gold-deep:#a97c22;
+    --green:#5c8a3c; --green-lit:#7cb04f; --line:#5a4830;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:1000px; margin:0 auto; padding:0 20px}
+  a{color:var(--gold)}
+
+  /* ---------- hero ---------- */
+  header{
+    position:relative; padding:64px 0 56px; text-align:center;
+    background:
+      radial-gradient(120% 90% at 50% -10%, #3d5a2a 0%, #2b3d1e 42%, var(--bg) 78%);
+    border-bottom:3px solid var(--line);
+  }
+  .icon{
+    width:120px; height:120px; border-radius:26px; display:block; margin:0 auto 20px;
+    border:3px solid var(--gold-deep); box-shadow:0 10px 28px rgba(0,0,0,.55);
+    image-rendering:pixelated;
+  }
+  h1{
+    margin:0 0 6px; font-size:clamp(2.1rem,7vw,3.4rem); letter-spacing:.02em;
+    color:var(--gold); text-shadow:0 3px 0 #6b4c14, 0 6px 18px rgba(0,0,0,.6);
+  }
+  .tagline{margin:0 auto 26px; max-width:34ch; font-size:clamp(1rem,2.6vw,1.2rem); color:var(--ink)}
+  .badges{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:28px}
+  .badge{
+    font-size:.82rem; padding:6px 13px; border-radius:999px;
+    background:rgba(0,0,0,.3); border:1px solid var(--line); color:var(--ink-dim);
+  }
+  .status{
+    display:inline-block; padding:11px 22px; border-radius:12px;
+    background:var(--panel); border:2px solid var(--gold-deep);
+    font-weight:700; color:var(--ink);
+  }
+  .status small{display:block; font-weight:400; color:var(--ink-dim); font-size:.82rem; margin-top:3px}
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0; border-bottom:1px solid var(--line)}
+  h2{
+    margin:0 0 8px; font-size:1.6rem; color:var(--gold);
+    text-align:center; letter-spacing:.01em;
+  }
+  .sub{margin:0 auto 34px; max-width:52ch; text-align:center; color:var(--ink-dim)}
+
+  /* ---------- shots ---------- */
+  .shots{display:flex; gap:16px; overflow-x:auto; padding:4px 0 14px; scroll-snap-type:x mandatory}
+  .shots img{
+    width:240px; flex:0 0 auto; border-radius:12px; border:2px solid var(--line);
+    scroll-snap-align:center; background:#000; image-rendering:pixelated;
+  }
+  @media (min-width:820px){
+    .shots{justify-content:center; overflow-x:visible}
+    .shots img{width:calc(25% - 12px)}
+  }
+
+  /* ---------- features ---------- */
+  .grid{display:grid; gap:16px; grid-template-columns:1fr}
+  @media (min-width:640px){ .grid{grid-template-columns:1fr 1fr} }
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-left:4px solid var(--gold-deep);
+    border-radius:10px; padding:18px 20px;
+  }
+  .card h3{margin:0 0 6px; font-size:1.06rem; color:var(--gold)}
+  .card p{margin:0; color:var(--ink-dim); font-size:.95rem}
+
+  /* ---------- footer ---------- */
+  footer{padding:44px 0 60px; text-align:center; color:var(--ink-dim); font-size:.92rem}
+  .flinks{display:flex; flex-wrap:wrap; gap:10px 26px; justify-content:center; margin-bottom:20px}
+  .rule{width:60px; height:3px; background:var(--gold-deep); border-radius:2px; margin:0 auto 22px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="icon" src="icon.png" alt="Legion Clash icon">
+    <h1>Legion Clash</h1>
+    <p class="tagline">Build your army, set the formation, and auto-battle your way to victory.</p>
+    <div class="badges">
+      <span class="badge">Free to play</span>
+      <span class="badge">No account needed</span>
+      <span class="badge">One-handed portrait</span>
+      <span class="badge">Campaign plays offline</span>
+    </div>
+    <div class="status">
+      In closed testing — launching soon
+      <small>Android · by Sudoja Games</small>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Win the fight before it starts</h2>
+    <p class="sub">
+      You never control units mid-battle. You recruit them, merge them into stronger tiers,
+      and place them on the grid — then watch your plan hold or fall apart.
+    </p>
+    <div class="shots">
+      <img src="shot1.png" alt="Legion Clash main camp screen" loading="lazy">
+      <img src="shot2.png" alt="Troop roster with rarity tiers" loading="lazy">
+      <img src="shot3.png" alt="Two armies clashing automatically" loading="lazy">
+      <img src="shot4.png" alt="A large-scale auto-battle in progress" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What's in the game</h2>
+    <div class="rule"></div>
+    <div class="grid">
+      <div class="card">
+        <h3>⚔️ Arrange your formation</h3>
+        <p>Drop troop cards onto a 5×4 grid. Melee up front, ranged behind. Every unit costs
+           Capacity, so smarter placement fields a bigger army.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Auto-battle, your way</h3>
+        <p>No twitch reflexes, no frantic tapping. Speed controls let you savour a comeback
+           or blitz an easy win at 3×.</p>
+      </div>
+      <div class="card">
+        <h3>🔺 Merge &amp; upgrade</h3>
+        <p>Recruit duplicates and merge them into higher tiers. A pile of common soldiers
+           becomes the elite squad that carries your whole line.</p>
+      </div>
+      <div class="card">
+        <h3>👑 Conquer the campaign</h3>
+        <p>Escalating stages with new enemy types and a boss every five levels — Minotaurs,
+           Trolls, and worse.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Collect 23 troops</h3>
+        <p>Knights, archers, mages and captured monsters across Common, Rare, Epic and
+           Legendary tiers. Every one of them is recruitable.</p>
+      </div>
+      <div class="card">
+        <h3>💰 Idle gold &amp; daily rewards</h3>
+        <p>Your legion keeps earning while you're away, and login streaks grow. Come back
+           to a fatter treasury and push further.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="flinks">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="mailto:melgiegi77@gmail.com">Support</a>
+      <a href="https://www.tiktok.com/@sudoja3">TikTok</a>
+    </div>
+    <p>© 2026 Sudoja Games. Legion Clash and all related content are the property of Sudoja Games.</p>
+  </div>
+</footer>
+
+</body>
+</html>
