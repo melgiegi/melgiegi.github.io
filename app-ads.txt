@@ -3,6 +3,7 @@ OWNERDOMAIN=melgiegi.github.io
 # --- DIRECT: akun milik Sudoja Games ---
 google.com, pub-5623066217971215, DIRECT, f08c47fec0942fa0
 ironsrc.com, 677335, DIRECT
+vungle.com, 6ab1168badbd10019b9a7c73, DIRECT, c107d686becd2d77
 
 # --- Unity Ads / ironSource Exchange authorized sellers ---
 smartclip.net, 14679, RESELLER
